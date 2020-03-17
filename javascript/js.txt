@@ -1,0 +1,590 @@
+字符串
+length属性 返回字符串长度
+indexOf方法 查找文本首次出现位置
+lastIndexOf方法 最后一次出现位置
+search 查找文本出现位置，可搭配正则表达式使用
+slice(start,end) substring(start,end) substr(start,length) 提取字符串
+replace 替换字符串中的值，只替换首个匹配 大小写敏感
+toUpperCase 转换大写
+toLowerCase 转化小写
+concat 连接两个字符串 拼接数组
+trim 删除字符串两端空白 IE8不支持
+charAt 返回指定下标的字符
+charCodeAt 返回指定索引的Unicode编码
+split 用指定字符分割字符串，若为“”则一个字母一位
+isNaN 确定某个结果是否为数
+Infinity 超出最大可能数范围返回的值
+toString 将数字转化进制 以字符串返回数值
+toExpoential 返回字符串值 使用指数计数法的数字，定义小数点后的字符数
+toFixed 返回字符串值，定义了字符数的小数的数字
+toPrecision 返回指定长度的数字
+valueOf 返回其原始值
+Number 把js变量转化为数值
+parse 从字符串中解析JSON字符串
+stringify 将对象转化为字符串
+defineProperty 
+parselnt 解析一段字符串并返回数值 允许空格 只返回首个数字 返回整数
+parseFloat 解析一段字符串并返回数值 返回浮点数
+MAX_VALUE Number对象的最大值 不能被变量，表达式或值使用 undefined
+MIN_VALUE Number对象的最小值
+POSITIVE_INFINITY 溢出时返回infinity
+NEGATIVE_INFINITY 溢出时返回-infinity
+
+
+数组
+数组length属性 返回数组长度
+遍历数组使用for 或 foreach
+push 新添元素 length
+Array.isArray 判断是否为数组 instanceof
+join 利用分隔符将数组元素组成一个字符串
+pop 弹出元素
+shift 删除第一个元素，并移动其他元素
+unshift 添加第一个元素，并移动其他元素
+delete 直接删除元素，但会留下空挡 也可用于删除对象中的属性和值 不会删除被继承的属性
+splice 添加新项 添加位置，删除各数，后接新项 返回删除项的数组
+slice 裁剪数组 一个参数，裁剪当前位置到最后 两个参数，开始到结束
+sort 默认排序为按照字母次序进行排序，如果想按数字进行排序，则添加比值函数
+foreach 项目值，项目索引，数组本身 value index Array 每个数组元素调用一次函数
+map 项目值，项目索引，数组本身 value index Array 对每个数组元素执行函数创建新数组
+filter 项目值，项目索引，数组本身 value index Array 创建一个通过测试的数组
+reduce 总数，项目值，项目索引，数组本身 total value inde Array 生成单个值可以接受一个初始值
+reduceRight 同上
+every 检查是否所有数组值都通过测试 项目值，项目索引，数组本身
+some 检查 是否有些数组织通过测试 项目值，项目索引，数组本身
+find 返回值 项目值，项目索引，数组本身
+findIndex 返回索引 项目值，项目索引，数组本身
+
+
+日期
+Date 年，月，日，小时，分钟，秒和毫秒
+toUTCString 将日期转化为UTC字符串
+toDateString 将日期转化为更易读的格式
+ISO日期 YYYY-MM-DD
+短日期 MM/DD/YYYY 不带前导0的月会产生错误
+长日期 MMM DD YYYY月和天可以任意顺序
+完整日期字符串 会被忽略错误
+getDate()	以数值返回天（1-31）
+getDay()	以数值获取周名（0-6）
+getFullYear()	获取四位的年（yyyy）
+getHours()	获取小时（0-23）
+getMilliseconds()	获取毫秒（0-999）
+getMinutes()	获取分（0-59）
+getMonth()	获取月（0-11）
+getSeconds()	获取秒（0-59）
+getTime()	获取时间（从 1970 年 1 月 1 日至今）
+setDate()	以数值（1-31）设置日
+setFullYear()	设置年（可选月和日）
+setHours()	设置小时（0-23）
+setMilliseconds()	设置毫秒（0-999）
+setMinutes()	设置分（0-59）
+setMonth()	设置月（0-11）
+setSeconds()	设置秒（0-59）
+setTime()	设置时间（从 1970 年 1 月 1 日至今的毫秒数）
+
+
+数学
+Math.round 取整
+Math.pow(x,y) x的y次幂
+Math.sqrt(x) 返回 x 的平方根
+Math.abs(x) 返回 x 的绝对（正）值
+Math.ceil(x) 的返回值是 x 上舍入最接近的整数
+Math.floor(x) 的返回值是 x 下舍入最接近的整数
+Math.sin(x) 返回角 x（以弧度计）的正弦（介于 -1 与 1 之间的值） Angle in radians = Angle in degrees x PI / 180.
+Math.cos(x) 返回角 x（以弧度计）的余弦（介于 -1 与 1 之间的值）
+Math.min() 和 Math.max() 可用于查找参数列表中的最低或最高值
+Math.random() 返回介于 0（包括） 与 1（不包括） 之间的随机数
+Math.E          // 返回欧拉指数（Euler's number）
+Math.PI         // 返回圆周率（PI）
+Math.SQRT2      // 返回 2 的平方根
+Math.SQRT1_2    // 返回 1/2 的平方根
+Math.LN2        // 返回 2 的自然对数
+Math.LN10       // 返回 10 的自然对数
+Math.LOG2E      // 返回以 2 为底的 e 的对数（约等于 1.414）
+Math.LOG10E     // 返回以 10 为底的 e 的对数（约等于0.434）
+与其他全局对象不同，Math对象没有构造函数。方法和属性是静态的。
+可以在不首先创建Math对象的情况下使用所有方法和属性（常量）
+
+
+布尔值
+Boolean() 函数来确定表达式（或变量）是否为真
+0（零）的布尔值为 false
+-0 （负零）的布尔值为 false
+""（空值）的布尔值为 false
+undefined 的布尔值是 false
+null 的布尔值是 false
+false 的布尔值（正如您猜到的）是 false
+NaN 的布尔值是 false
+
+
+switch 值必须与要匹配的类型相同 只有操作数属于同一类型时，严格比较才能为 true
+
+对象类型 对象，数组，日期
+Number()转化数字 String()转化字符串  Boolean()转化布尔值
+null 的数据类型是对象
+未定义变量的数据类型是 undefined
+尚未赋值的变量的数据类型也是 undefined
+object.constructor.toString().indexOf("")>-1
+object.constructor=object(return myArray.constructor === Array)
+
+
+正则表达式
+正则表达式是构成搜索模式（search pattern）的字符序列
+正则表达式可用于执行所有类型的文本搜索和文本替换操作
+常用search() replace()  /i 大小写不敏感 /g 全局
+括号用于查找一定范围的字符串
+[abc]	查找方括号之间的任何字符。
+[0-9]	查找任何从 0 至 9 的数字。
+[^abc]	查找任何不在方括号之间的字符。
+[A-z]	查找任何从大写 A 到小写 z 的字符。
+[a-z]	查找任何从小写 a 到小写 z 的字符。
+(x|y)	查找由 | 分隔的任何选项。
+元字符是拥有特殊含义的字符
+\d	查找数字。	
+\s	查找空白字符。	
+\b	匹配单词边界。	
+\uxxxx	查找以十六进制数 xxxx 规定的 Unicode 字符。
+Quantifiers定义量词
+n+	匹配任何包含至少一个 n 的字符串。	
+n*	匹配任何包含零个或多个 n 的字符串。	
+n?	匹配任何包含零个或一个 n 的字符串。
+test()通过模式来搜索字符串，根据结果返回true or false
+exec() 方法是一个正则表达式方法。
+它通过指定的模式（pattern）搜索字符串，并返回已找到的文本。
+如果未找到匹配，则返回 null。
+compile() 方法用于在脚本执行过程中编译正则表达式。
+compile() 方法也可用于改变和重新编译正则表达式。
+
+
+异常处理
+try 语句使您能够测试代码块中的错误。
+catch 语句允许您处理错误。
+throw 语句允许您创建自定义错误。
+finally 使您能够执行代码，在 try 和 catch 之后，无论结果如何。
+
+
+error对象属性
+name	设置或返回错误名
+message	设置或返回错误消息（一条字符串）
+RangeError	已发生超出数字范围的错误
+ReferenceError	已发生非法引用
+SyntaxError	已发生语法错误
+TypeError	已发生类型错误
+URIError	在 encodeURI() 中已发生的错误
+
+
+为尚未声明的变量赋值，此变量会自动成为全局变量。（carName = "porsche";）
+在“严格模式”中不会自动创建全局变量。
+在 HTML 中，全局作用域是 window。所有全局变量均属于 window 对象。（window.carName）
+除非有意为之，否则请勿创建全局变量。
+您的全局变量（或函数）能够覆盖 window 变量（或函数）。
+任何函数，包括 window 对象，能够覆盖您的全局变量和函数。
+Hoisting 是 JavaScript 将所有声明提升到当前作用域顶部的默认行为（提升到当前脚本或当前函数的顶部）
+Hoisting 应用于变量声明和函数声明 
+使用表达式定义的函数不会被提升
+用 let 或 const 声明的变量和常量不会被提升！
+JavaScript 只提升声明，而非初始化。
+
+
+严格模式
+在函数中声明严格模式，拥有局部作用域（只有函数中的代码以严格模式执行）
+严格模式中不允许的事项
+在不声明变量的情况下使用变量，是不允许的：
+对象也是变量 在不声明对象的情况下使用对象也是不允许的：
+删除变量（或对象）是不允许的：
+删除函数是不允许的：
+重复参数名是不允许的：
+八进制数值文本是不允许的：
+转义字符是不允许的：
+写入只读属性是不允许的：
+写入只能获取的属性是不允许的：
+删除不可删除的属性是不允许的：
+字符串 "eval" 不可用作变量：
+字符串 "arguments" 不可用作变量：
+with 语句是不允许的：
+处于安全考虑，不允许 eval() 在其被调用的作用域中创建变量：
+在类似 f() 的函数调用中，this 的值是全局对象。在严格模式中，现在它成为了 undefined。
+严格模式中不允许使用为未来预留的关键词。它们是：
+implements
+interface
+let
+package
+private
+protected
+public
+static
+yield
+"use strict" 指令只能在脚本或函数的开头被识别。
+
+
+this
+this并非变量，而是关键字
+JavaScript this 关键词指的是它所属的对象。
+它拥有不同的值，具体取决于它的使用位置：
+在方法中，this 指的是所有者对象。
+单独的情况下，this 指的是全局对象。[object Window]
+在函数中，this 指的是全局对象。
+在函数中，严格模式下，this 是 undefined。
+在事件中，this 指的是接收事件的元素。
+像 call() 和 apply() 这样的方法可以将 this 引用到任何对象。
+
+
+let
+通过 let 关键词定义的全局变量不属于 window 对象：
+在相同的作用域，或在相同的块中，通过 let 重新声明一个 var 变量是不允许的：
+在相同的作用域，或在相同的块中，通过 let 重新声明一个 let 变量是不允许的：
+在相同的作用域，或在相同的块中，通过 var 重新声明一个 let 变量是不允许的：
+在不同的作用域或块中，通过 let 重新声明变量是允许的：   
+
+
+const
+通过 const 定义的变量与 let 变量类似，但不能重新赋值
+在块作用域内使用 const 声明的变量与 let 变量相似
+JavaScript const 变量必须在声明时赋值：
+没有定义常量值。它定义了对值的常量引用。
+因此，我们不能更改常量原始值，但我们可以更改常量对象的属性，无法重新对常量对象赋值
+const car = {type:"porsche", model:"911", color:"Black"};car.color = "White";car.owner = "Bill";
+在同一作用域或块中，不允许将已有的 var 或 let 变量重新声明或重新赋值给 const
+在同一作用域或块中，为已有的 const 变量重新声明声明或赋值是不允许的
+在另外的作用域或块中重新声明 const 是允许的
+通过 const 定义的变量不会被提升到顶端。const 变量不能在声明之前使用
+
+
+调试
+如果您的浏览器支持调试，那么您可以使用 console.log() 在调试窗口中显示 JavaScript 的值：
+debugger 关键词会停止 JavaScript 的执行，并调用（如果有）调试函数。
+这与在调试器中设置断点的功能是一样的。
+如果调试器不可用，debugger 语句没有效果。
+
+
+加法用于加数值。
+级联（Concatenation）用于加字符串
+JavaScript 不支持带有命名索引的数组
+在 JavaScript 中，数组使用数字索引
+Internet Explorer 8 会崩溃。
+JSON 不允许尾随逗号。
+在测试非 null 之前，必须先测试未定义
+if (typeof myObj !== "undefined" && myObj !== null)
+
+
+请把脚本放在页面底部，使浏览器首先加载页面。
+脚本在下载时，浏览器不会启动任何其他的下载。此外所有解析和渲染活动都可能会被阻塞。
+HTTP 规范定义浏览器不应该并行下载超过两种要素。
+一个选项是在 script 标签中使用 defer="true"。defer 属性规定了脚本应该在页面完成解析后执行，但它只适用于外部脚本。
+如果可能，您可以在页面完成加载后，通过代码向页面添加脚本
+<script>
+window.onload = downScripts;
+function downScripts() {
+    var element = document.createElement("script");
+    element.src = "myScript.js";
+    document.body.appendChild(element);
+}
+</script>
+
+
+JSON
+发送数据 如果您的数据存储在Js对象中，你可以把对象转化为JSON，然后将其发送到服务器
+接收数据 如果您以JSON格式接收数据，您能够将其转化为JS对象
+存储数据 JSON格式让JS对象存储为文本成为可能
+JSON 格式仅仅是文本，它能够轻松地在服务器浏览器之间传输，并用作任何编程语言的数据格式
+JSON 提供内建函数parse() 以JSON格式的字符串转化为原生JS对象
+JSON 是存储和传输数据的格式。
+JSON 经常在数据从服务器发送到网页时使用。
+JSON 指的是 JavaScript Object Notation
+JSON 是轻量级的数据交换格式
+JSON 独立于语言 *
+JSON 是“自描述的”且易于理解
+数据是名称/值对
+字符串 数字 对象(JSON对象) 数组 布尔 null 
+函数 日期 undefined
+数据由逗号分隔
+花括号保存对象
+方括号保存数组
+{
+"employees":[
+    {"firstName":"Bill", "lastName":"Gates"}, 
+    {"firstName":"Steve", "lastName":"Jobs"},
+    {"firstName":"Alan", "lastName":"Turing"}
+]
+}
+'{"employees":['+'{"firstname":"lastname","lastname":"firstname"},'+'{"":"","":""}]}';  
+
+
+
+JS表单
+如果表单字段（fname）是空的，required 属性防止表单被提交
+服务器端验证是由 web 服务器执行的，在输入被送往服务器之后
+客户端验证是由 web 浏览器执行的，在输入被送往 web 服务器之前
+checkValidity 返回true，如果input元素包含有效数据
+setCustomValidity 设置input元素中的validationMessage属性
+
+
+Js对象
+Js几乎所有事物都是对象（日期，算术，正则表达式，数组，函数，对象）
+原始值是指没有方法或属性的值
+原始数据类型是指拥有原始值的数据
+方法是可以在对象上执行的动作，对象方法是包含函数定义的对象属性
+Object.create()可用来创建对象
+var x = person;
+person为对象的话，创建的对象x并非对象person的副本，x就是对象person，类似于C++中的引用
+通过for in循环来遍历对象
+
+
+对象内方法
+name : function(){}
+对象外方法
+person.name = function(){};
+
+
+getter和setter
+get 关键字 get lang(){}
+set 关键字 set lang(){}
+它提供了更简洁的语法
+它允许属性和方法的语法相同
+它可以确保更好的数据质量
+有利于后台工作
+Object.defineProperty() 方法也可用于添加 Getter 和 Setter
+Object.defineProperty(obj, "reset", {
+  get : function () {this.counter = 0;}
+});
+Object.defineProperty(obj, "add", {
+  set : function (value) {this.counter += value;}
+});
+
+
+对象构造器
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+    this.nationality = "English";
+    this.changeName = function (name) {
+        this.lastName = name;
+    };
+}
+如需向构造器添加一个新属性，您必须添加到构造器函数
+var myFather = new Person("Bill", "Gates", 62, "blue");
+var myMother = new Person("Steve", "Jobs", 56, "green");
+必须在构造器函数内部为一个对象添加新方法
+内建对象构造器
+var x1 = new Object();    // 一个新的 Object 对象    var x1 = {};            // 新对象
+var x2 = new String();    // 一个新的 String 对象   var x2 = "";            // 新的原始字符串
+var x3 = new Number();    // 一个新的 Number 对象   var x3 = 0;             // 新的原始数值
+var x4 = new Boolean();   // 一个新的 Boolean 对象  var x4 = false;         // 新的原始逻辑值
+var x5 = new Array();     // 一个新的 Array 对象    var x5 = [];            // 新的数组对象
+var x6 = new RegExp();    // 一个新的 RegExp 对象   var x6 = /()/           // 新的正则表达式对象
+var x7 = new Function();  // 一个新的 Function 对象     var x7 = function(){};  // 新的函数对象
+var x8 = new Date();      // 一个新的 Date 对象
+Math() 对象不再此列。Math 是全局对象。new 关键词不可用于 Math。
+
+JavaScript prototype 属性允许您为对象构造器添加新属性和新方法
+Person.prototype.nationality = "English";
+Person.prototype.name = function() {
+    return this.firstName + " " + this.lastName;
+};
+
+
+函数
+arguments.length 会返回函数被调用时收到的参数数目
+toString() 方法以字符串返回函数
+定义为对象属性的函数，被称为对象的方法
+为创建新对象而设计的函数，被称为对象构造函数（对象构造器）
+箭头函数没有this 无法被Hoisting
+
+
+JS ES5 对象方法
+Object.defineProperty(object, property, {value : value}) 用于添加或更改对象属性
+writable : true      // 属性值可修改
+enumerable : true    // 属性可枚举
+configurable : true  // 属性可重新配置
+writable : false     // 属性值不可修改
+enumerable : false   // 属性不可枚举
+configurable : false // 属性不可重新配置
+也可用于添加Getter和Setter// 定义 getter
+Object.defineProperty(person, "fullName", {
+  get : function () {return this.firstName + " " + this.lastName;}
+});
+
+
+闭包
+var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+})();
+变量 add 的赋值是自调用函数的返回值。
+这个自调用函数只运行一次。它设置计数器为零（0），并返回函数表达式。
+这样 add 成为了函数。最“精彩的”部分是它能够访问父作用域中的计数器。
+这被称为 JavaScript 闭包。它使函数拥有“私有”变量成为可能。
+计数器被这个匿名函数的作用域保护，并且只能使用 add 函数来修改。
+闭包指的是有权访问父作用域的函数，即使在父函数关闭之后。
+有权访问另一个变量作用域中的变量的函数
+
+
+DOM
+HTML DOM 是关于如何获取、更改、添加或删除 HTML 元素的标准
+允许程序和脚本动态地访问、更新文档的内容、结构和样式
+HTML DOM 方法是您能够（在 HTML 元素上）执行的动作
+HTML DOM 属性是您能够设置或改变的 HTML 元素的值
+
+
+AJAX
+XMLHttpRequest对象用于同幕后浏览器交换数据，可以更新网页的部分而不需要重新加载
+对于IE5和IE6，使用前要对浏览器进行检查是否支持
+if (window.XMLHttpRequest) {
+    xhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+     xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+使用POST的情况
+缓存文件不是选项（更新服务器上的文件或数据库）
+向服务器发送大量数据（POST无限制）
+发送用户输入（可包含未知字符），POST比GET更安全更强大
+如需异步发送请求，open() 方法的 async 参数必须设置为 true
+通过异步发送，JavaScript 不必等待服务器响应，而是可以：
+在等待服务器响应时执行其他脚本
+当响应就绪时处理响应
+function lod(){
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        if(this.readystate == 4&&this.status == 200){
+            document.getElementById("demo").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET","/?fname=Bill&lname=Gates",true);
+    xhttp.send();
+}
+如需执行同步的请求，请把 open() 方法中的第三个参数设置为 false
+有时 async = false 用于快速测试。你也会在更老的 JavaScript 代码中看到同步请求。
+由于代码将等待服务器完成，所以不需要 onreadystatechange 函数
+function lod(){
+    xhttp = new XMLHttpRequest();
+    xhttp.open("GET","/?fname=Bill&lname=Gates",true);
+    xhttp.send();
+    document.getElementById("demo").innerHTML = this.responseText;
+}
+
+
+JSBOM
+浏览器对象模型 允许JS与浏览器对话
+
+
+Screen对象
+width为屏幕宽度
+height为屏幕高度
+availHeight 属性返回访问者屏幕的高度，以像素计，减去诸如窗口工具条之类的界面特征
+colorDepth 属性返回用于显示一种颜色的比特数
+pixelDepth 属性返回屏幕的像素深度
+所有现代计算机都使用 24 位或 32 位硬件的色彩分辨率：
+24 bits =16,777,216 种不同的 "True Colors"
+32 bits = 4,294,967,296 中不同的 "Deep Colors"
+更老的计算机使用 14 位：65,536 种不同的 "High Colors" 分辨率
+异常古老的计算机，以及老式的手机使用 8 位：256 中不同的 "VGA colors"
+
+
+Location对象
+window.location.href 返回当前页面的 href (URL)
+window.location.hostname 返回 web 主机的域名
+window.location.pathname 返回当前页面的路径或文件名
+window.location.protocol 返回使用的 web 协议（http: 或 https:）
+window.location.assign 加载新文档
+
+
+window.history 对象可不带 window 书写。
+为了保护用户的隐私，JavaScript 访问此对象存在限制
+history.back() - 等同于在浏览器点击后退按钮
+history.forward() - 等同于在浏览器中点击前进按钮
+
+
+window.navigator 对象包含有关访问者的信息
+cookieEnabled 属性返回 true，如果 cookie 已启用，否则返回 false
+appName 属性返回浏览器的应用程序名称
+appCodeName 属性返回浏览器的应用程序代码名称
+product 属性返回浏览器引擎的产品名称
+appVersion 属性返回有关浏览器的版本信息
+userAgent 属性返回由浏览器发送到服务器的用户代理报头（user-agent header）
+来自 navigator 对象的信息通常是误导性的，不应该用于检测浏览器版本，因为：
+不同浏览器能够使用相同名称
+导航数据可被浏览器拥有者更改
+某些浏览器会错误标识自身以绕过站点测试
+浏览器无法报告发布晚于浏览器的新操作系统
+platform 属性返回浏览器平台（操作系统）
+language 属性返回浏览器语言
+onLine 属性返回 true，假如浏览器在线
+javaEnabled() 方法返回 true，如果 Java 已启用
+
+
+
+JavaScript 有三种类型的弹出框：警告框、确认框和提示框
+如果要确保信息传递给用户，通常会使用警告框。
+当警告框弹出时，用户将需要单击“确定”来继续。
+alert("我是一个警告框！");
+如果您希望用户验证或接受某个东西，则通常使用“确认”框
+当确认框弹出时，用户将不得不单击“确定”或“取消”来继续进行
+如果用户单击“确定”，该框返回 true。如果用户单击“取消”，该框返回 false
+window.confirm() 方法可以不带 window 前缀来编写
+如果您希望用户在进入页面前输入值，通常会使用提示框。
+当提示框弹出时，用户将不得不输入值后单击“确定”或点击“取消”来继续进行。
+如果用户单击“确定”，该框返回输入值。如果用户单击“取消”，该框返回 NULL
+window.prompt("sometext","defaultText");
+
+
+JavaScript 可以在时间间隔内执行
+这就是所谓的定时事件（ Timing Events）
+setTimeout(function, milliseconds)
+在等待指定的毫秒数后执行函数。
+第一个参数是要执行的函数。
+第二个参数指示执行之前的毫秒数
+clearTimeout() 方法停止执行 setTimeout() 中规定的函数
+clearTimeout() 使用从 setTimeout() 返回的变量
+setInterval(function, milliseconds)
+等同于 setTimeout()，但持续重复执行该函数。
+第一个参数是要执行的函数。
+第二个参数每个执行之间的时间间隔的长度
+clearInterval() 方法停止 setInterval() 方法中指定的函数的执行
+clearInterval() 方法使用从 setInterval() 返回的变量
+setTimeout() 和 setInterval() 都属于 HTML DOM Window 对象的方法
+
+
+cookie
+Cookie 是在您的计算机上存储在小的文本文件中的数据。
+当 web 服务器向浏览器发送网页后，连接被关闭，服务器会忘记用户的一切。
+Cookie 是为了解决“如何记住用户信息”而发明的：
+当用户访问网页时，他的名字可以存储在 cookie 中。
+下次用户访问该页面时，cookie 会“记住”他的名字。
+Cookie 保存在名称值对中
+
+
+for in 应用于数组循环返回的是数组的下标和数组的属性和原型上的方法和属性
+而for in应用于对象循环返回的是对象的属性名和原型中的方法和属性
+for of遍历的是数组元素值 不能循环普通对象
+想用for...of来遍历普通对象的属性的话，可以通过和Object.keys()搭配使用，先获取对象的所有key的数组
+
+
+PHP
+使用PHP函数json_encode()，PHP中的对象可转化为JSON
+JSON.stringify() 将 JavaScript 对象转换为 JSON
+
+
+JQuery
+jQuery 使用 $ 符号作为 jQuery 的简介方式
+某些其他 JavaScript 库中的函数（比如 Prototype）同样使用 $ 符号。
+jQuery 使用名为 noConflict() 的方法来解决该问题。
+var jq=jQuery.noConflict()，帮助您使用自己的名称（比如 jq）来代替 $ 符号
+$(selector).hide(speed,callback);
+$(selector).show(speed,callback);
+可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。
+可选的 callback 参数是隐藏或显示完成后所执行的函数名称。
+通过 jQuery，您可以使用 toggle() 方法来切换 hide() 和 show() 方法。
+显示被隐藏的元素，并隐藏已显示的元素
+$(document).ready(function(){
+  $("button").click(function(){
+  $("p").toggle();
+  });
+});
+
+
+new操作符具体做了什么
+创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型
+属性和方法被加入到 this 引用的对象中
+新创建的对象由 this 所引用，并且最后隐式的返回 this

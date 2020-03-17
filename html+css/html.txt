@@ -1,0 +1,127 @@
+meta
+meta是用来在HTML文档中模拟HTTP协议的响应头报文。
+meta 标签用于网页的<head>与</head>中，meta 标签的用处很多。
+meta 的属性有两种：name和http- equiv。
+name属性主要用于描述网页，对应于content（网页内容），以便于搜索引擎机器人查找、分类
+（目前几乎所有搜索引擎都使用网上机器人自动查找meta值来给网页分类）。
+这其中最重要的是description（站点在搜索引擎上的描述）和keywords（分类关键词），所以应该给每页加一个meta值。
+比较常用的有以下几个：
+name 属性
+1、<meta name="Generator" contect="">用以说明生成工具（如Microsoft FrontPage 4.0）等；
+2、<meta name="KEYWords" contect="">向搜索引擎说明你的网页的关键词；
+3、<meta name="DEscription" contect="">告诉搜索引擎你的站点的主要内容；
+4、<meta name="Author" contect="你的姓名">告诉搜索引擎你的站点的制作的作者；
+5、<meta name="Robots" contect= "all|none|index|noindex|follow|nofollow">
+其中的属性说明如下：
+设定为all：文件将被检索，且页面上的链接可以被查询；
+设定为none：文件将不被检索，且页面上的链接不可以被查询；
+设定为index：文件将被检索；
+设定为follow：页面上的链接可以被查询；
+设定为noindex：文件将不被检索，但页面上的链接可以被查询；
+设定为nofollow：文件将不被检索，页面上的链接可以被查询。
+http-equiv属性
+1、<meta http-equiv="Content-Type" contect="text/html";charset=gb_2312-80">
+和 <meta http-equiv="Content-Language" contect="zh-CN">用以说明主页制作所使用的文字以及语言；
+又如英文是ISO-8859-1字符集，还有BIG5、utf-8、shift-Jis、Euc、Koi8-2等字符集；
+2、<meta http-equiv="Refresh" contect="n;url=http://yourlink">定时让网页在指定的时间n内，跳转到页面http://yourlink；
+3、<meta http-equiv="Expires" contect="Mon,12 May 2001 00:20:00 GMT">可以用于设定网页的到期时间，一旦过期则必须到服务器上重新调用。需要注意的是必须使用GMT时间格式；
+4、<meta http-equiv="Pragma" contect="no-cache">是用于设定禁止浏览器从本地机的缓存中调阅页面内容，设定后一旦离开网页就无法从Cache中再调出；
+5、<meta http-equiv="set-cookie" contect="Mon,12 May 2001 00:20:00 GMT">cookie设定，如果网页过期，存盘的cookie将被删除。需要注意的也是必须使用GMT时间格式；
+6、<meta http-equiv="Pics-label" contect=""& gt;网页等级评定，在IE的internet选项中有一项内容设置，可以防止浏览一些受限制的网站，而网站的限制级别就是逼br />?过meta属性来设置的；
+7、<meta http-equiv="windows-Target" contect="_top">强制页面在当前窗口中以独立页面显示，可以防止自己的网页被别人当作一个frame页调用；
+8、<meta http-equiv="Page-Enter" contect="revealTrans(duration=10,transtion= 50)">和<meta http-equiv="Page-Exit" contect="revealTrans(duration=20，transtion=6)">设定进入和离开页面时的特殊效果，这个功能即FrontPage中的“格式/网页过渡”，不过所加的页面不能够是一个frame页面
+
+html5的新特性
+https://www.cnblogs.com/vicky1018/p/7705223.html
+https://blog.csdn.net/weixin_42429718/article/details/104435170
+1.语义化标签
+好处:1.使代码结构清晰，便于阅读2.便于SEO3.无障碍阅读4.便于后期的维护与开发
+2.智能表单
+3.html5中提供了多个新的类型的input类型
+color、datatime、data、tel、e-mail、number、range、search
+3.音频（audio）和视频（video）
+4.canvas
+5.svg
+6.地理地位
+7.拖放的API
+8.web worker
+9.web storage
+10. web socket 
+
+
+flex布局
+
+
+HTML <q> 元素定义短的引用。
+浏览器通常会为 <q> 元素包围引号。
+用于长引用的 HTML <blockquote>
+HTML <blockquote> 元素定义被引用的节。
+浏览器通常会对 <blockquote> 元素进行缩进处理。
+HTML <abbr> 元素定义缩写或首字母缩略语。
+对缩写进行标记能够为浏览器、翻译系统以及搜索引擎提供有用的信息
+
+
+<!DOCTYPE> 声明位于文档中的最前面的位置，处于 <html> 标签之前。
+<!DOCTYPE> 声明不是一个 HTML 标签；它是用来告知 Web 浏览器页面使用了哪种 HTML 版本。
+在 HTML 4.01 中，<!DOCTYPE> 声明需引用 DTD （文档类型声明），因为 HTML 4.01 是基于 SGML （Standard Generalized Markup Language 标准通用标记语言）。DTD 指定了标记语言的规则，确保了浏览器能够正确的渲染内容。
+HTML5 不是基于 SGML，因此不要求引用 DTD。
+提示：总是给您的 HTML 文档添加 <!DOCTYPE> 声明，确保浏览器能够预先知道文档类型。
+
+
+简述前端性能优化的方式
+1、减少DOM操作
+2、部署前，图片压缩，代码压缩
+3、优化js代码结构，减少冗余代码
+4、减少http请求，合理设置HTTP缓存
+5、使用内容分发cdn加速
+6、静态资源缓存
+7、图片延迟加载
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="js.css" type="text/css">
+</head>
+
+<body>
+    <p id ="obj"></p>
+    <p id="sort">i=1,j=2,what is i+j=?</p>
+    <p id="sum" onmousemove="change()">1+1;</p>
+    <p id="none">This is no display.</p>
+    <p>The max number is<span id="max"></span></p>
+    <p>The min number is<span id="min"></span></p>
+    <button id="btn">result</button><br>
+    <button id="btn1">result1</button><br>
+    <button onclick="date1()">date</button><br>
+    <button onclick="display()">display</button><br>
+    <button onclick="number()">number</button><br>
+    <button onclick="letter()">letter</button><br>
+    <button onclick="random()">random</button><br>
+    <button onclick="count()">count</button>
+    <button onclick="this.style.display='none'">bye</button>
+    <input type="text" id="demo">
+    <button type="button" onclick="myFuction()">测试输入</button>
+    <p id="message"></p>
+    <p id="date"></p>
+    <script>
+        function display() {
+            document.getElementById("none").style.display = "none";
+        }
+        function change() {
+            document.getElementById("sum").style.backgroundColor = "red";
+            // document.getElementById("sum").innerHTML = m; 
+        }
+        // document.getElementById("btn").addEventListener("click",function demo(){alert("change");});//DOM2级事件
+        var btn = document.getElementById("btn");
+        btn.onclick = function demo() { alert("hello"); };//将一个函数赋值给一个事件处理程序属性 DOM0级事件
+        // btn.onclick = null;
+    </script>
+    <script>
+        var btn1 = document.getElementById("btn1");
+        if (btn1.addEventListener)
+            btn1.addEventListener("click", demo);//满足IE8及以下
+        else if (btn1.attchEvent("onclick", demo))
+            btn1.attchEvent("onclick", demo);
+        else
+            btn1.onclick = demo();
+        function demo() {
+            alert("world");
+        }
+    </script>
+    <script>
+        function date1() {
+            document.getElementById("date").innerHTML = Date();
+        }
+    </script>
+    <script>
+        var array = [1, 100, 10, 5, 40, 25];
+        document.getElementById("sort").innerHTML = array;
+        function letter() {
+            document.getElementById("sort").innerHTML = array.sort();
+        }
+        function number() {
+            document.getElementById("sort").innerHTML = array.sort(function (a, b) { return a - b });
+        }
+        function random() {
+            document.getElementById("sort").innerHTML = array.sort(function (a, b) { return 0.5 - Math.random() });
+        }
+        document.getElementById("max").innerHTML = max(array);
+        document.getElementById("min").innerHTML = min(array);
+        function max(arr) {
+            return Math.max.apply(null, arr);
+        }
+        function min(arr) {
+            return Math.min.apply(null, arr);
+        }
+    </script>
+    <script>
+        function myFunction() {
+            var message, x;
+            message = document.getElementById("message");
+            message.innerHTML = "";
+            x = document.getElementById("demo").value;
+            try {
+                if (x == "") throw "空的";
+                if (isNaN(x)) throw "不是数字";
+                x = Number(x);
+                if (x < 5) throw "太小";
+                if (x > 10) throw "太大";
+            }
+            catch (err) {
+                message.innerHTML = "输入是 " + err;
+            } 
+            finally {
+                document.getElementById("demo").value = "";
+            }
+        }
+    </script>
+    <script>
+        var obj = {counter : 0};
+        Object.defineProperty(obj,"reset",{
+            get : function(){this.counter=0;}
+        });
+        Object.defineProperty(obj,"increment",{
+            get :function(){this.counter++;}
+        });
+        Object.defineProperty(obj,"decrement",{
+            get : function(){this.counter--;}
+        });
+        Object.defineProperty(obj,"add",{
+            set : function(value){this.counter+=value}
+        });
+        Object.defineProperty(obj,"subtract",{
+            set : function(value){this.counter-=value;}
+        });
+        obj.reset;
+        obj.add = 5;
+        obj.subtract = 1;
+        obj.increment;
+        obj.decrement;
+        function count(){
+            document.getElementById("obj").innerHTML = obj.counter;
+        }
+    </script>
+</body>
+
+</html>

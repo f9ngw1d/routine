@@ -1,0 +1,203 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <style>
+        .active{
+            border: 1px solid rgb(255, 0, 0);
+        }
+    </style>
+</head>
+    
+<body>
+    <script src="./vue.js"></script>
+    <div id="app">
+        {{message}}
+        <h2>{{school.name}}{{school.mobile}}</h2>
+        <ul>
+            <li>{{campus[0]}}</li>
+            <li>{{campus[1]}}</li>
+        </ul>
+    </div>
+    <div id="ap">
+        <h2 v-text="message +'!'">fengfan</h2>
+        <h2 v-text="info"></h2>
+        <h2>sumiao{{info+"!"}}</h2>
+    </div>
+    <div id="html">
+        <p v-html="content"></p>
+        <p v-text="content"></p>
+    </div>
+    <div id="button">
+        <input type="button" value="click" v-on:click="doIT"></br>
+        <input type="button" value="mouseenter" v-on:mouseenter="doIT"></br>
+        <input type="button" value="dblclick" v-on:dblclick="doIT"></br>
+        <h1 @click="changefood">{{food}}</h1>
+    </div>
+    <div id="count">
+        <div class="input-num">
+            <button @click="sub">
+                -
+            </button>
+            <span>{{num}}</span>
+            <button @click="add">
+                +
+            </button>
+            <img src="http://www.itheima.com/images/logo.png" alt="">
+        </div>
+    </div>
+    <div id="show">
+        <input type="button" value ="切换显示状态"@click = "showimg">
+        <input type="button" value ="age"@click = "addAge">
+        <p v-if="isshow">i love sumiao</p>
+        <p v-show="isshow">i love sumiao very much</p>
+        <img v-show="isshow" src="./1.jpg" alt="">
+        <img v-show="age>18" src="./2.jpg" alt="">
+    </div>
+    <div id="bind">
+        <img v-bind:src="imgS"alt="">
+        <img :src="imgS" :title="imgT+'!!!'" :class="{active:isActive}" @click="changeActive">
+    </div>
+    <div id = "stick">
+        <ul>
+            <li v-for="a in arr">
+                {{a}}
+            </li>
+        </ul>
+    </div>
+    <div id="model">
+        <input type="text"v-model="message" name="" id="" @keyup.enter="cms">
+        <input type="button" value="changemessage"name="" id="" @click="changemessage">  
+    </div>
+    <script>
+        var mod=new Vue({
+            el:"#model",
+            data:{
+                message:"I love liuyifei"
+            },
+            methods: {  
+                cms:function(){
+                    alert(this.message);
+                },
+                changemessage:function(){
+                    this.message = "I love sumiao!!!";
+                }
+            },
+        })
+    </script>
+    <script>
+        var lis=new Vue({
+            el:"#stick",
+            data:{
+                arr:["Beijing","Shanghai","Shenzhen","Wuhan"]
+            }
+        })
+    </script>
+    <script>
+        var bin=new Vue({
+            el:"#bind",
+            data:{
+                isActive:false,
+                imgT:"miaomiaomiao",
+                imgS:"http://www.itheima.com/images/logo.png"
+            },
+            methods:{
+                changeActive:function(){
+                    this.isActive=!this.isActive;
+                }
+            }
+        })
+    </script>
+    <script>
+        var show = new Vue({
+            el:"#show",
+            data:{
+                isshow:false,
+                age:17
+            },
+            methods:{
+                showimg:function(){
+                    this.isshow = !this.isshow;
+                },
+                addAge:function(){
+                    this.age++;
+                }
+            }
+        })
+    </script>
+    <script>
+        var count = new Vue({
+            el: "#count",
+            data: {
+                num: 1
+            },
+            methods: {
+                add: function () {
+                    if (this.num < 10){
+                        this.num++;
+                    }else{
+                        alert("it is max");
+                    }
+                },
+                sub: function () {
+                    if (this.num > 0){
+                        this.num -= 1;
+                    }else{
+                        alert("it is min");
+                    }
+                }
+            }
+        })
+    </script>
+    </div>
+    <script>
+        var butt = new Vue({
+            el: "#button",
+            data: {
+                food: "potato eggs"
+            },
+            methods: {
+                doIT: function () {
+                    alert("I love sumiao");
+                },
+                changefood: function () {
+                    this.food += "delicous!!"
+                }
+            }
+        })
+    </script>
+    <script>
+        var ht = new Vue({
+            el: "#html",
+            data: {
+                // content:"I want to fuck you sumiao"
+                content: "<a href='https://www.baidu.com'>sumiao</a>"
+            }
+        })
+    </script>
+    <script>
+        var ap = new Vue({
+            el: "#ap",
+            data: {
+                message: "day day up",
+                info: " i love you"
+            }
+        })
+    </script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: "good study",
+                school: {
+                    name: "fengfan",
+                    mobile: "1661939313"
+                },
+                campus: ["Beijing", "Shanghai", "Tianjing", "Nanjing"]
+            }
+        })
+    </script>
+</body>
+
+</html>
